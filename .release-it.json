@@ -62,6 +62,8 @@
   "github": {
     "release": true,
     "assets": ["dist/*.tgz"]
+  },
+  "hooks": {
+    "after:bump": "markdown-toc -i README.md --maxdepth 10 && git add ."
   }
-
 }
