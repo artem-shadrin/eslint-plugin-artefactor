@@ -12,7 +12,7 @@ Welcome to our project! We're thrilled that you're considering contributing. Her
 ## Branching
 
 1. Create a new branch for your contribution: git checkout -b feature/my-feature.
-2. Keep your branch up to date with the main branch: `git pull origin main`.
+2. Keep your branch up to date with the master branch: `git pull origin master`.
 
 ## Committing with Conventional Commits and Commit-lint
 
@@ -33,7 +33,7 @@ You can use the command to automate this flow:
 ## Pull Requests
 
 1. Push your changes to your forked repository.
-2. Create a Pull Request (PR) from your branch to the main repository's main branch.
+2. Create a Pull Request (PR) from your branch to the master repository's master branch.
 3. Provide a clear PR title and an explanatory description of your changes.
 4. Reference relevant issues using keywords like "Closes #123".
 
