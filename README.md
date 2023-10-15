@@ -1,6 +1,6 @@
 # eslint-plugin-artefactor
 
-The &#34;eslint-artefactor&#34; plugin is designed to improve and simplify the process of static verification of your code
+A comprehensive linting solution that sweeps your code clean
 
 ## Installation
 

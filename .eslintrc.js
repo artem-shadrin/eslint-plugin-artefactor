@@ -13,8 +13,7 @@ module.exports = {
   overrides: [
     {
       files: ["tests/**/*.js"],
-      env: {mocha: true},
+      env: { mocha: true },
     },
   ],
-  ignorePatterns: ["node_modules", "dist", ".husky", ".idea"]
 };

@@ -1,15 +1,13 @@
 {
   "name": "eslint-plugin-artefactor",
-  "version": "0.1.3",
-  "license": "ISC",
-  "repository": "https://github.com/artem-shadrin/eslint-plugin-artefactor.git",
-  "description": "The \"eslint-artefactor\" plugin is designed to improve and simplify the process of static verification of your code",
+  "version": "0.0.0",
+  "description": "A comprehensive linting solution that sweeps your code clean",
   "keywords": [
     "eslint",
     "eslintplugin",
     "eslint-plugin"
   ],
-  "author": "artem",
+  "author": "Artem",
   "main": "./dist/index.js",
   "exports": "./dist/index.js",
   "files": [
@@ -18,17 +16,19 @@
     "package.json"
   ],
   "scripts": {
-    "build": "rm -rf ./dist && mkdir ./dist && cp -r ./lib/* ./dist",
-    "pack": "npm pack --pack-destination=./dist",
-    "release": "release-it"
+    "lint": "npm-run-all \"lint:*\"",
+    "lint:eslint-docs": "npm-run-all \"update:eslint-docs -- --check\"",
+    "lint:js": "eslint .",
+    "test": "mocha tests --recursive",
+    "update:eslint-docs": "eslint-doc-generator",
+    "buid": "rm -rf ./dist && mkdir ./dist && cp -r ./lib/* ./dist",
+    "pack": "npm pack --pack-destination=./dist"
   },
   "dependencies": {
     "requireindex": "^1.2.0"
   },
   "devDependencies": {
-    "@release-it/bumper": "^5.1.0",
-    "@release-it/conventional-changelog": "^7.0.2",
-    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/eslint-plugin": "^6.7.5",
     "eslint": "^8.19.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-doc-generator": "^1.0.0",
@@ -37,22 +37,22 @@
     "eslint-plugin-import": "^2.28.1",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-sonarjs": "^0.21.0",
-    "eslint-plugin-testing-library": "^6.0.2",
+    "eslint-plugin-testing-library": "^6.1.0",
     "eslint-plugin-unicorn": "^48.0.1",
     "mocha": "^10.0.0",
-    "npm-run-all": "^4.1.5",
-    "release-it": "^16.2.1"
+    "npm-run-all": "^4.1.5"
   },
   "engines": {
     "node": "^14.17.0 || ^16.0.0 || >= 18.0.0"
   },
   "peerDependencies": {
     "eslint": ">=7"
-  }
+  },
+  "license": "ISC"
 }
